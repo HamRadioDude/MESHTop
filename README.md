@@ -6,7 +6,7 @@ MeshCore companion radio over Bluetooth, so you can read and send messages witho
 pulls in live traffic from a [CoreScope](https://github.com/Kpa-clawbot/CoreScope) server, so you see what your
 radio hears and what the whole network hears, on one screen. No computer needed once it's set up.
 
-Free and open source (MIT). By DudeTested (HamRadioDude).
+Free and open source (MIT). By DudeTested (HamRadioDude). https://www.youtube.com/@DudeTested
 
 New to this? Start with the step-by-step **[beginner's guide](GUIDE.md)**.
 
