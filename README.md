@@ -1,5 +1,7 @@
 # MESHtop
 
+![MESHtop on the desk](images/meshtop-desk.jpg)
+
 **A desk screen for your MeshCore mesh.** MESHtop turns the Elecrow CrowPanel Advance 7" (ESP32-S3, 800x480 touch)
 into a live map and messenger for [MeshCore](https://github.com/meshcore-dev/MeshCore). It pairs with your own
 MeshCore companion radio over Bluetooth, so you can read and send messages without picking up your phone, and it
@@ -26,6 +28,9 @@ New to this? Start with the step-by-step **[beginner's guide](GUIDE.md)**.
   - people and repeaters, login and status, **repeater neighbours** and **remote admin** for repeaters you run
   - trace route, **find a route**, "who can hear me?", radio health
   - join hashtag and private channels, region presets, transmit power, Bluetooth PIN
+  - chats **saved on the SD card**, so they survive restarts and updates, and a **Messages page** to read them
+    in your phone's browser
+  - **"Leave messages for my phone"**: messages stay waiting on your radio for the MeshCore phone app
 - **STATUS**: connection, packets per minute, nodes known, data source, map card, dimming.
 - **Data source**: CoreScope and your radio, CoreScope only, or your radio only.
 - **Settings page** in your browser (scan the QR code on STATUS): CoreScope server, your area and radius, night
@@ -50,7 +55,8 @@ commission at no extra cost to you, which helps me eat and keeps MESHtop free.*
 
   Without a radio, MESHtop still shows CoreScope's map and channels.
 - **Optional microSD card** (FAT32 or exFAT) for offline maps.
-- **Optional case**: 3D-printable files are published separately (see the release notes for the link).
+- **Optional case**: STEP files in [`case/`](case); printable STL files on Printables (link in the release
+  notes). Print settings and assembly are in the [guide](GUIDE.md).
 
 ## Install
 Use Chrome or Edge with the panel plugged in by USB-C, and a web flasher that lets you set the address, such as
@@ -117,9 +123,11 @@ rename). Keep them, so updates keep everyone's settings.
 - `src/device` - board (display, touch, backlight, buzzer), network task, Bluetooth radio link, settings storage,
   settings web page
 - `src/app` - platform interface and demo mode
-- `sim` - desktop simulator (with a fake MeshCore radio speaking the real frame format)
+- `sim` - desktop simulator (with a fake MeshCore radio speaking the real frame format); `make -C sim windows`
+  builds **MESHtop Desktop**, the screens in a window on Windows for screen recording (demo traffic, real maps)
 - `tools` - build checks (privacy, exFAT), CA bundle generator, screenshot converter
 - `tools/mappack` - map pack maker for the memory card (Node.js)
+- `case` - 3D-printable case: bezel, back cover, radio pod, stand, and the full assembly (STEP)
 
 ## Map data
 Map tiles © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors. Online tiles come from the

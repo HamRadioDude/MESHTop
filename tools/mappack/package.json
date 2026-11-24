@@ -1,0 +1,15 @@
+{
+  "name": "meshtop-map-pack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Makes offline map packs for MESHtop (and WadaMesh) memory cards from OpenStreetMap data, drawn on your own computer.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "bin": { "make-map-pack": "make-map-pack.mjs" },
+  "dependencies": {
+    "@maplibre/maplibre-gl-native": "^6.4.1",
+    "@protomaps/basemaps": "^5.7.2",
+    "sharp": "^0.34.4"
+  }
+}
